@@ -5,8 +5,8 @@ body {
 h1 {
     padding: 20px;                  /* Vnitřní odsazení nadpisu */
     margin: 0px;                    /* Odstranění výchozího okraje */
-    background-color: #333;       /* Nastavení barvy pozadí na tmavě šedou */
-    color: white;                 /* Nastavení barvy textu na bílou */
+    background-color: #333;         /* Nastavení barvy pozadí na tmavě šedou */
+    color: white;                   /* Nastavení barvy textu na bílou */
 }
 .row {
     display: flex;                  /* Použití flexboxu pro rozložení prvků */
@@ -15,19 +15,19 @@ h1 {
 .column {
     padding: 20px;
     box-sizing: border-box;         /* Padding bude součástí velikosti prvk. To je velmi důležité pro správnou funkci flexboxu, kde šířku potomků definujeme procenty šířky flexboxu */
-    color: white;                 /* Nastavení barvy textu na bílou */    
+    color: white;                   /* Nastavení barvy textu na bílou */    
 }
 
 /* NASTAVENÍ TŘÍ OBSAHOVÝCH DIVŮ SPOLEČNÁ PRO VŠECHNA MÉDIA (šířky zobrazení) */
 
 #levy {
-    background-color: red;        /* Nastavení barvy pozadí na červenou */
+    background-color: red;          /* Nastavení barvy pozadí na červenou */
 }
 #pravy {
-    background-color: blue;       /* Nastavení barvy pozadí na modrou */
+    background-color: blue;         /* Nastavení barvy pozadí na modrou */
 }
 #stred {
-    background-color: green;      /* Nastavení barvy pozadí na zelenou */
+    background-color: green;        /* Nastavení barvy pozadí na zelenou */
 }
 
 
