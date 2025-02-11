@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif; /* Nastavení fontu pro celé tělo stránky */
+    margin: 0px;                    /* Odstranění výchozího okraje */
+}
+h1 {
+    padding: 20px;                  /* Vnitřní odsazení nadpisu */
+    margin: 0px;                    /* Odstranění výchozího okraje */
+    background-color: #333;       /* Nastavení barvy pozadí na tmavě šedou */
+    color: white;                 /* Nastavení barvy textu na bílou */
+}
+.row {
+    display: flex;                  /* Použití flexboxu pro rozložení prvků */
+    flex-direction: row;            /* Nastavení směru hlavní osy na řádek */
+}
+.column {
+    padding: 20px;
+    box-sizing: border-box;         /* Padding bude součástí velikosti prvk. To je velmi důležité pro správnou funkci flexboxu, kde šířku potomků definujeme procenty šířky flexboxu */
+    color: white;                 /* Nastavení barvy textu na bílou */    
+}
+
+/* NASTAVENÍ TŘÍ OBSAHOVÝCH DIVŮ SPOLEČNÁ PRO VŠECHNA MÉDIA (šířky zobrazení) */
+
+#levy {
+    background-color: red;        /* Nastavení barvy pozadí na červenou */
+}
+#pravy {
+    background-color: blue;       /* Nastavení barvy pozadí na modrou */
+}
+#stred {
+    background-color: green;      /* Nastavení barvy pozadí na zelenou */
+}
+
+
+/* NASTAVENÍ TŘÍ OBSAHOVÝCH DIVŮ PRO DESKTOP (nad 900px) */
+
+@media (min-width: 900px) {
+    .row { 
+        flex-direction: row;        /* Směr hlavní osy zůstává řádek */
+    }
+    #levy, #stred, #pravy {
+        flex: 1;                    /* Velikost každého prvku je v poměru 1:3 */
+    }
+}
+
+
+/* NASTAVENÍ TŘÍ OBSAHOVÝCH DIVŮ PRO TABLET (600px - 900px) */
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .row { 
+        flex-direction: row;        /* Směr hlavní osy zůstává řádek */
+        flex-wrap: wrap;            /* Povolení zalamování řádků */
+    }
+    #levy, #stred {
+        flex: 50%;                  /* Prvek zabírá 50% šířky kontejneru */
+    }
+    #pravy {
+        flex: 100%;                 /* Prvek zabírá 100% šířky kontejneru */
+    }    
+}
+
+/* NASTAVENÍ TŘÍ OBSAHOVÝCH DIVŮ PRO MOBIL (do 600px) */
+@media (max-width: 600px) {
+    .row { 
+        flex-direction: column;     /* Změna směru hlavní osy na sloupec */
+    }
+    #levy, #stred, #pravy {
+        flex: 100%;                 /* Prvek zabírá 100% šířky kontejneru */
+    }
+}
